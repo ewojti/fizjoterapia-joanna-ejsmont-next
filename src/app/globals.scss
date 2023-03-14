@@ -1,5 +1,4 @@
 @import "./utilities/variables";
-// @import headerMob
 
 * {
   box-sizing: border-box;
@@ -16,7 +15,6 @@ body {
 html {
   height: 100%;
 }
-
 
 a {
   color: unset;
@@ -50,29 +48,36 @@ a {
 }
 
 .app__bg-separator {
-  height: 400px;
-  background-attachment: fixed;
-  .app__bg-separator-img{
-    height: 100%;
-    background-attachment: fixed;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.6;  
+  // background-image: url("../../public/assets/headerMob.jpg");
+  // opacity: 0.5;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-position: top 90px right;
+  .app__bg-separator-img-desktop {
+    display: none;
+  }
+  .app__bg-separator-img-mobile {
+    object-position: 0 90px;
   }
 }
 
-// @media screen and (min-width: 768px) {
-//   .app__bg-separator {
-//     background-image: url("../../public/assets/cwiczenia.jpg");
-//     background-position: top 20px right;
-//   }
-// }
+@media screen and (min-width: 768px) {
+  .app__bg-separator {
+    .app__bg-separator-img-desktop {
+      display: block;
+      object-position: top;
+    }
+    .app__bg-separator-img-mobile {
+      display: none;
+    }
+  }
+}
 
-// @media screen and (min-width: 1024px) {
-//   .app__bg-separator {
-//     background-position: none;
-//   }
-// }
+@media screen and (min-width: 1024px) {
+  .app__bg-separator {
+  }
+}
 
 .app__heading-h1 {
   font-family: $--ff-cormorant;
@@ -229,16 +234,16 @@ a {
 
 @media screen and (min-width: 768px) {
   .app__heading-h1 {
-  font-size: $--fs-h1;
-}
+    font-size: $--fs-h1;
+  }
 
   .app__heading-h2 {
     font-size: $--fs-h2;
   }
 
   .app__heading-h3 {
-  font-size: $--fs-h3;
-}
+    font-size: $--fs-h3;
+  }
   .p__cormorant {
     font-size: $--fs-body;
   }

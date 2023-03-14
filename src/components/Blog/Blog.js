@@ -39,7 +39,7 @@ const Blog = () => {
           </div>
         ))}
       </div>
-        <Link href="/blog" className="app__blog-button-link">
+        <Link href="/blog-list" className="app__blog-button-link">
       <button className="app__blog-button p__cormorant">
           Zobacz wszystkie posty
       </button>
